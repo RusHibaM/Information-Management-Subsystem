@@ -29,10 +29,10 @@ if ($user_type == "Student"){
 	$SQL = "Select stu_id, stu_name From imsStudent where stu_id =  $user_id and stu_pwd = $password";
 	}
 elseif($user_type == "Teacher"){
-	$SQL = "Select teac_id, teac_name From imsStudent where teac_id =  $user_id and teac_pwd = $password";
+	$SQL = "Select teac_id, teac_name From imsTeacher where teac_id =  $user_id and teac_pwd = $password";
 	}
 else {
-	$SQL = "Select mgr_id, mgr_name From imsStudent where mgr_id =  $user_id and mgr_pwd = $password";
+	$SQL = "Select mgr_id, mgr_name From imsManager where mgr_id =  $user_id and mgr_pwd = $password";
  }
 
 //echo $SQL; 

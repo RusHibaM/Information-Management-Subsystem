@@ -176,14 +176,14 @@
 					$dbNames = array("mgr_id","mgr_pwd","mgr_phone","mgr_address","mgr_name","mgr_dept","mgr_email");
 				 }
             $result = mysql_query($sql);
-			echo $result;
-			$count = "0";
+			//echo $result;
+			$count = '0';
             $i = 0; //array index
 		
 				if($_SESSION["view_type"]=="3")
 				{           
 					if($row = mysql_fetch_array($result)) {
-						$count="1";
+						$count='1';
 						echo "<table class=\"table table-bordered\">";
 						echo    "<thead>";
 						echo        "<tr>";
@@ -266,7 +266,7 @@
 				else if($_SESSION["view_type"]=="2")
 				{
 						if($row = mysql_fetch_array($result)) {
-							$count = "1";
+							$count = '1';
 							echo "<table class=\"table table-bordered\">";
 							echo    "<thead>";
 							echo        "<tr>";
@@ -336,7 +336,7 @@
 			else
 			{
 				if($row = mysql_fetch_array($result)) {
-					$count = "1";
+					$count = '1';
 					echo "<table class=\"table table-bordered\">";
 					echo    "<thead>";
 					echo        "<tr>";
@@ -388,9 +388,12 @@
             }
             mysql_close($con);	
 			
-			if($count=="0")
-				header('Location: ./OperationFail2.php');
-
+			if($count=='0')
+			{
+				//header('Location: ./OperationFail2.php');
+				echo " <h1><strong>No records</strong></h1>";
+				echo "<p><a class=\"btn btn-primary btn-lg\" role=\"button\" href=\"lookup.php\">Modify Search Condition</a></p>";
+			}
 			if($_SESSION["user_id"]==$_SESSION["view_id"]||$_SESSION["user_type"]=="1"
 					||(($_SESSION["user_type"]=="2")&&($_SESSION["view_type"]=="3")))
 				echo "<p><a class=\"btn btn-primary btn-lg\" role=\"button\" 
