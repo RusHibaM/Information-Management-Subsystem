@@ -91,7 +91,7 @@
 
 				<li style="background-image: url('p2.jpg');">
 					<div class="inner">
-						<h3>The System has seven subsystems</h3>
+						<h1>The System has seven subsystems</h1>
 						<p>2014</p>
 					</div>
 				</li>

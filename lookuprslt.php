@@ -47,23 +47,19 @@
       
       <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="dropdown">
+             <li class="dropdown">
                 <a href="" class="dropdown-toggle" data-toggle="dropdown">User Information<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li class="dropdown-header" style="font-size:18px">The portals:</li>
                   <li style="height:3px"><br/></li>
-                  <li><a href="./viewdata.php">My Information</a></li>
+                  <li><a href="./viewdata.php">View My Information</a></li>
                   <li class="divider"></li>
-                  <li><a href="">Look Up Users</a></li>
-                  <li class="divider"></li>
+                  <li><a href="lookup.php">User Information Query</a></li>
 				  <?php
-					session_start();
-					$_SESSION["return"]="update";
-					if($_SESSION["user_type"]=="Manager")
+					if($_SESSION["user_type"]=="1")
 					{
-					  echo	"<li><a href=\"add.php\">Add a User</a></li>";
-					  echo	"<li class=\"divider\"></li>";
-					  echo	"<li><a href=\"groupright.php\">Group Priviledge</a></li>";
+					  echo  "<li class=\"divider\"></li>";
+					  echo	"<li><a href=\"add.php\">User Information Add</a></li>";
 					}
 				  ?>
                 </ul>

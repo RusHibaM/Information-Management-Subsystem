@@ -34,7 +34,7 @@
         <!-- Fixed navbar -->
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         
-            <a class="navbar-brand">Information Management Subsystem</a>
+            <a class="navbar-brand" href="IMSwelcome.php">Information Management Subsystem</a>
               
        </div><!--navbar navbar-inverse navbar-fixed-top-->
 
@@ -60,8 +60,7 @@
 	          echo "</div>";
 	          }
 	        ?>
-	        
-	  
+	        	  
 	  
 	          <div class="form-group">
 		        <div class = "row">
@@ -95,12 +94,12 @@
 	</form> 
        
     </div> <!-- /container -->
-	 <div id="footer">
+
+    <div id="footer">
         <div class="container">
             <p class="text-muted">中加班2014 Software Engineering</p>
         </div>
-    </div>	
-   
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
